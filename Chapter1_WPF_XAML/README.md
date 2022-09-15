@@ -5,7 +5,7 @@ Create a WPF application that shows 5 input controls (code keys) and a button.
 
 ![alt text][img_exercise1_start]
  
-The goal of the app is that the users fills in the 5 keys of a code.
+The goal of the app is that the users fill in the 5 keys of a code.
 To break the code the user has to fill in the following values:
 * 'PXL' in the top left textbox
 * 'ForLife' in the top middle passwordbox
@@ -25,7 +25,7 @@ When the code is not broken after 5 attempts, a game over message is displayed a
 
 ![alt text][img_exercise1_gameover]
 
-Use the automated test to guid you to the correct solution.
+Use the automated test to guide you to the correct solution.
 Do as much as possible **in XAML**. Only the code validation logic should be in MainWindow.xaml.cs.
 
 [img_exercise1_start]:images/exercise1_mainwindow_start.png "MainWindow at start"
