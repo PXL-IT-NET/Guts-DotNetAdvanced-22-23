@@ -31,7 +31,7 @@ namespace Exercise2.Tests
             _textBlock = _scrollViewer.Content as TextBlock;
         }
 
-        [MonitoredTest("Should not have changed the codebehind file")]
+        [MonitoredTest("About - Should not have changed the codebehind file")]
         public void _01_ShouldNotHaveChangedTheCodebehindFile()
         {
             var codeBehindFilePath = @"Exercise2\Controls\About.xaml.cs";
@@ -41,7 +41,7 @@ namespace Exercise2.Tests
                 "Undo your changes on the file to make this test pass.");
         }
 
-        [MonitoredTest("Should have all controls")]
+        [MonitoredTest("About - Should have all controls")]
         public void _02_ShouldHaveAllControls()
         {
             Assert.That(_grid, Is.Not.Null, "The Content of the control should be a Grid");
@@ -53,7 +53,7 @@ namespace Exercise2.Tests
                 "The scrollbar should only be visible when it is needed.");
         }
 
-        [MonitoredTest("The Grid should have a linear gradient background")]
+        [MonitoredTest("About - The Grid should have a linear gradient background")]
         public void _03_TheGridShouldHaveALinearGradientBackground()
         {
             _02_ShouldHaveAllControls();
@@ -74,7 +74,7 @@ namespace Exercise2.Tests
             Assert.That(brush.GradientStops[2].Offset == 1.0, Is.True, "The last color should be right at the end");
         }
 
-        [MonitoredTest("The TextBlock should display text at the bottom using Inlines")]
+        [MonitoredTest("About - The TextBlock should display text at the bottom using Inlines")]
         public void _04_TheTextBlockShouldDisplayTextAtTheBottomUsingInlines()
         {
             _02_ShouldHaveAllControls();

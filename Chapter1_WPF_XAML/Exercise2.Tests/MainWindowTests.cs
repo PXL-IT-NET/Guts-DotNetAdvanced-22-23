@@ -41,7 +41,7 @@ public class MainWindowTests
         _window?.Close();
     }
 
-    [MonitoredTest("Should not have changed the codebehind file")]
+    [MonitoredTest("MainWindow - Should not have changed the codebehind file")]
     public void _01_ShouldNotHaveChangedTheCodebehindFile()
     {
         var codeBehindFilePath = @"Exercise2\MainWindow.xaml.cs";
@@ -51,7 +51,7 @@ public class MainWindowTests
             "Undo your changes on the file to make this test pass.");
     }
 
-    [MonitoredTest("Should have 2 tabs")]
+    [MonitoredTest("MainWindow - Should have 2 tabs")]
     public void _02_ShouldHave2Tabs()
     {
         Assert.That(_tabControl, Is.Not.Null, "The Content of the Window should be a TabControl");
@@ -59,7 +59,7 @@ public class MainWindowTests
         Assert.That(_aboutTab, Is.Not.Null, "The 'about' TabItem is not found");
     }
 
-    [MonitoredTest("Chapter tab should be set correctly")]
+    [MonitoredTest("MainWindow - Chapter tab should be set correctly")]
     public void _03_ChapterTab_ShouldBeSetCorrectly()
     {
         _02_ShouldHave2Tabs();
@@ -83,7 +83,7 @@ public class MainWindowTests
             "The content of the tab should be an instance of the Chapters UserControl");
     }
 
-    [MonitoredTest("About tab should be set correctly")]
+    [MonitoredTest("MainWindow - About tab should be set correctly")]
     public void _04_AboutTab_ShouldBeSetCorrectly()
     {
         _02_ShouldHave2Tabs();
