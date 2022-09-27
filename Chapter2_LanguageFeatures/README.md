@@ -13,6 +13,9 @@ The delegate you have to create for this returns a list of compositions (search 
 
 Create and implement the 3 Search methods in the CompositionFilters class
 
+A Composition has a Title, a Description, a Composer and a ReleaseDate property.
+
+Complete the GetAllCompositions method in the CompositionSearcher by creating a list of Compositions.
 
 ![alt text][img_exercise1_output]
  
