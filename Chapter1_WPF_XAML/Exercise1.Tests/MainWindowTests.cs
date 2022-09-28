@@ -63,7 +63,7 @@ namespace Exercise1.Tests
         public void _01_ShouldHaveAllControls()
         {
             Assert.That(_grid, Is.Not.Null, "The Content of the Window should be a Grid");
-            Assert.That(_titleTextBlock, Is.Not.Null, "No TextBox control is found for the title");
+            Assert.That(_titleTextBlock, Is.Not.Null, "No TextBlock control is found for the title");
             Assert.That(_key1TextBox, Is.Not.Null, "No TextBox control is found for key1");
             Assert.That(_key2PasswordBox, Is.Not.Null, "No PasswordBox control is found for key2");
             Assert.That(_key3CheckBox, Is.Not.Null, "No CheckBox control is found for key3");
