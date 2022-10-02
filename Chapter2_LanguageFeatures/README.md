@@ -33,4 +33,4 @@ After filling in the firstname, lastname of the student and the departmentname, 
 
 
 [empty_mainwindow]:images/exercise2_mainWindow_empty.png "Student Registration"
-[mainwindow_withdata]:images/Exercise2_mainwindow_withdata.png "Register student with data"
+[mainwindow_withdata]:images/exercise2_mainwindow_withdata.png "Register student with data"
