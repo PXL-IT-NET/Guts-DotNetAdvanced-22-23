@@ -36,6 +36,7 @@ After filling in the firstname, lastname of the student and the departmentname, 
 Create the necessary delegate and event to handle this. 
 
 The Blackboard class listens for this event and will add the student to BlackBoard when the event is fired. This will be shown in the Blackboard textbox.
+
 ![alt text][mainwindow_eventisfired]
 
 [empty_mainwindow]:images/exercise2_mainwindow_empty.png "Student Registration"
