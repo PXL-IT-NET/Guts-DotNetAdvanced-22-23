@@ -32,5 +32,5 @@ Create a WPF application to register new Students.
 After filling in the firstname, lastname of the student and the departmentname, clicking the Add student button will register the student. ![alt_text][exercise_mainwindow_withdata] 
 
 
-[empty_mainwindow]:images/exercise2_mainWindow_empty.png "Student Registration"
-[mainwindow_withdata]:images/Exercise2_mainwindow_withdata.png "Register student with data"
+[empty_mainwindow]:images/exercise2_mainwindow_empty.png "Student Registration"
+[mainwindow_withdata]:images/exercise2_mainwindow_withdata.png "Register student with data"
