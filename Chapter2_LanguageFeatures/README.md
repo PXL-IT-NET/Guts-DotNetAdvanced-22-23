@@ -22,7 +22,7 @@ The method GetAllCompositions is given in the CompositionSearcher class and crea
 ![alt text][img_exercise1_output]
  
 
-[img_exercise1_output]:images/exercise1_Program_output.png "Ouptut Program"
+[img_exercise1_output]:images/exercise1_output.png "Ouptut Program"
 
 
 
