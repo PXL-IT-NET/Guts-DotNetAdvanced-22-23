@@ -29,7 +29,15 @@ The method GetAllCompositions is already written in the CompositionSearcher clas
 ## Exercise 2 - Student Administration
 Create a WPF application to register new Students. 
 ![alt text][empty_mainwindow]
-After filling in the firstname, lastname of the student and the departmentname, clicking the Add student button will register the student. ![alt_text][exercise_mainwindow_withdata] 
+
+After filling in the firstname, lastname of the student and the departmentname, clicking the 'Add student' button, an event will be fired and the student will be registred (added to a list of students).
+![alt_text][mainwindow_withdata] 
+
+Create the necessary delegate and event to handle this. 
+
+The Blackboard class listens for this event and will add the student to BlackBoard when the event is fired. This will be shown in the Blackboard textbox.
+![alt text][mainwindow_eventisfired]
 
 [empty_mainwindow]:images/exercise2_mainwindow_empty.png "Student Registration"
 [mainwindow_withdata]:images/exercise2_mainwindow_withdata.png "Register student with data"
+[mainwindow_eventisfired]:images/exercise2_mainwindow_studentadded.png "Student added To Blackboard"
