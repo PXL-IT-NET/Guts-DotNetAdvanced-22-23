@@ -30,7 +30,7 @@ The method GetAllCompositions is already written in the CompositionSearcher clas
 Create a WPF application to register new Students. 
 ![alt text][empty_mainwindow]
 
-After filling in the firstname, lastname of the student and the departmentname, clicking the 'Add student' button, an event will be fired and the student will be registred (added to a list of students).
+After filling in the firstname, lastname of the student and the departmentname, clicking the 'Add student' button, will fired an event and the student will be registred (added to a list of students).
 ![alt_text][mainwindow_withdata] 
 
 Create the necessary delegate and event to handle this. 
