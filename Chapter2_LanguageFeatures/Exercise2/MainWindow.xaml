@@ -1,0 +1,33 @@
+﻿<Window x:Class="Exercise2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Student Administration" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Margin="8" FontSize="24" FontWeight="Bold">BlackBoard</TextBlock>
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Background="Black">
+                <TextBlock x:Name="blackBoardTextBlock" Foreground="White" Margin="8"></TextBlock>
+            </ScrollViewer>
+        </Grid>
+        <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Center" VerticalAlignment="Stretch"></GridSplitter>
+        <StackPanel Grid.Column="2">
+            <TextBlock Margin="8" FontSize="24" FontWeight="Bold">Student Administration</TextBlock>
+            <TextBox x:Name="firstNameTextBox" HorizontalAlignment="Left" Text="Enter lastName" Margin="8" TextWrapping="Wrap" Width="120"/>
+            <TextBox x:Name="lastNameTextBox" HorizontalAlignment="Left" Text="Enter firstName" Margin="8" TextWrapping="Wrap" Width="120" />
+            <TextBox x:Name="departmentTextBox" HorizontalAlignment="Left" Text="Enter department" Margin="8" TextWrapping="Wrap" Width="120" />
+            <Button x:Name="addStudentButton" Content="Add Student" HorizontalAlignment="Left" Margin="8" Click="addStudentButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
