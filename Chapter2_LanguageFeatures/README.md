@@ -10,14 +10,14 @@ When you start the program, you have to enter a keyword. First the program will 
 
 The CompositionFilterDelegate is already defined in the CompositionFilterDelegate.cs file.
 
-Complete teh Composition class.
+Complete the Composition class. By running the tests and turning the tests into red, you can discover what code you have to add.
 
-Implement the 3 Search methods in the CompositionFilters class
+Implement the 3 Search methods in the CompositionFilters class. Again, use the tests to help with the implementation.
 
 In the CompositionSearcher class you have to implement the SearchMusic method. Pass a method reference (delegate) to this method, so you can pass each Filter method to this SearchMucic method.
 The delegate returns a list of compositions (search result) and takes 2 arguments: an argument of type Composition (music where you will be looking for the searchstring) and an argument of type string (searchstring)
 
-The method GetAllCompositions is given in the CompositionSearcher class and creates and returns a list of Compositions.
+The method GetAllCompositions is already written in the CompositionSearcher class and creates and returns a list of Compositions.
 
 ![alt text][img_exercise1_output]
  
