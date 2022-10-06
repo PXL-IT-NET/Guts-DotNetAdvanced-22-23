@@ -15,6 +15,8 @@ The matching test projects contain **automated tests** that can be run to check 
 ## Chapters
 The assignments for each chapter can be found in de README.md in the folder of the chapter or by clicking on one of the links below:
 * [Chapter 1 - WPF XAML](Chapter1_WPF_XAML/README.md)
+* [Chapter 2 - C# Language features](Chapter2_LanguageFeatures/README.md)
+* [Chapter 3 - DatabindingMVVM](Chapter3_DatabindingMVVM/README.md)
 <!-- * [Chapter 2 - C# Language Features](Chapter2_Language_Features/README.md)
 * [Chapter 3 - WPF Databinding and MVVM](Chapter3_WPF_Databinding_MVVM/README.md)
 * [Chapter 4 - WPF Resources and DataTemplates](Chapter4_WPF_Resources_Databinding/README.md)
