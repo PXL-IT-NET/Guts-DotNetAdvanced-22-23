@@ -1,6 +1,6 @@
-# Exercises - Chapter 4 - WPF Databinding
+# Exercises - Chapter 3 + 4 - WPF Databinding, MVVM, Resources, Data Templates
 
-## Exercise 1
+## Exercise 1 (Databinding)
 In this exercise you will create a window that shows a list of movies and also a form to add a new movie to the list. 
 
 ![Main Window](Images/Exercise1_MainWindow.png)
