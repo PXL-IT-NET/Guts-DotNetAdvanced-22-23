@@ -9,26 +9,27 @@ public class CompositionSearcherTests
     [MonitoredTest("CompositionSearcher - Should have one Private field of type IList<Composer>")]
     public void _01_ShouldHaveOnePrivateFieldOfTypeIListOfCompositions()
     {
-        Type type = typeof(CompositionSearcher);
-        FieldInfo[] fields = type.GetFields(BindingFlags.NonPublic | BindingFlags.Instance);
+        GetCompositionListField();
+    }
 
-        Assert.That(fields.Length, Is.GreaterThan(0), "The Compostion Class should have one private field");
-
-        Type typeOfField = fields[0].FieldType;
-
-        var typeList = typeof(IList<Composition>);
-
-        Assert.That(typeOfField, Is.EqualTo(typeList), "The Composition Class should have one private field of type List<Composition>");
+    private FieldInfo GetCompositionListField()
+    {
+        FieldInfo[] allFields = typeof(CompositionSearcher).GetFields(BindingFlags.NonPublic | BindingFlags.Instance);
+        Assert.That(allFields.Length, Is.GreaterThan(0), "Cannot find any private fields in the class");
+        FieldInfo? field = allFields.FirstOrDefault(fi => fi.FieldType.IsAssignableTo(typeof(IList<Composition>)));
+        Assert.That(field, Is.Not.Null, "The class should have one private field of type IList<Composition>");
+        return field!;
     }
 
     [MonitoredTest("CompositionSearcher - Should have constructor that fills the private field with compositions")]
     public void _02_ShouldHaveConstructorWhoFillsThatFillsThePrivateFieldWithCompositions()
     {
         CompositionSearcher searcher = new CompositionSearcher();
-        Assert.That(typeof(CompositionSearcher).HasDefaultConstructor(), Is.True,  "CompositionSearcher Class should have a parameterless default Constructor");
-        FieldInfo field = typeof(CompositionSearcher).GetField("_allCompositions", BindingFlags.NonPublic | BindingFlags.Instance);
-        List<Composition> compositions = (List<Composition>)field.GetValue(searcher);
-        Assert.That(compositions.Count, Is.EqualTo(4), "Constructor should call GetCompositions to fill the private member field");
+        FieldInfo field = GetCompositionListField();
+
+        IList<Composition>? compositions = field.GetValue(searcher) as IList<Composition>;
+        Assert.That(compositions, Is.Not.Null, "The private field that contains the compositions should not be null");
+        Assert.That(compositions.Count, Is.EqualTo(4), "Constructor should call GetCompositions to fill the private field");
     }
 
     [MonitoredTest("CompositionSearcher - SearchMusic - Should use delegate to filter compositions")]
