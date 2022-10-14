@@ -1,30 +1,45 @@
 using System.Windows;
 using System.Windows.Data;
+using NUnit.Framework;
 
-namespace Exercise1.Tests;
+namespace TestTools;
 
 public static class BindingUtil
 {
-    public static void AssertBinding(FrameworkElement targetElement, DependencyProperty targetProperty,
-        string expectedBindingPath, BindingMode allowedBindingMode)
+    public static BindingExpression AssertBinding(FrameworkElement targetElement, DependencyProperty targetProperty,
+        string expectedBindingPath, BindingMode allowedBindingMode, string? targetElementName = null)
     {
         BindingExpression binding = targetElement.GetBindingExpression(targetProperty);
+
+        if (string.IsNullOrEmpty(targetElementName))
+        {
+            targetElementName = targetElement.Name;
+        }
+        if (string.IsNullOrEmpty(targetElementName))
+        {
+            targetElementName = targetElement.GetType().Name;
+        }
+
         var errorMessage =
-            $"Invalid 'Binding' for the '{targetProperty.Name}' property of {targetElement.Name}.";
+            $"Invalid 'Binding' for the '{targetProperty.Name}' property of {targetElementName}.";
         Assert.That(binding, Is.Not.Null, errorMessage);
         Assert.That(binding.ParentBinding.Path.Path, Is.EqualTo(expectedBindingPath), errorMessage);
 
         var allowedBindingModes = new List<BindingMode> { allowedBindingMode };
-        var metaData = (FrameworkPropertyMetadata)targetProperty.GetMetadata(targetElement);
-        if (allowedBindingMode == BindingMode.TwoWay && metaData.BindsTwoWayByDefault)
+        if (targetProperty.GetMetadata(targetElement) is FrameworkPropertyMetadata metaData)
         {
-            allowedBindingModes.Add(BindingMode.Default);
+            if (allowedBindingMode == BindingMode.TwoWay && metaData.BindsTwoWayByDefault)
+            {
+                allowedBindingModes.Add(BindingMode.Default);
+            }
+            else if (allowedBindingMode == BindingMode.OneWay)
+            {
+                allowedBindingModes.Add(BindingMode.Default);
+            }
+            Assert.That(allowedBindingModes, Has.One.EqualTo(binding.ParentBinding.Mode), errorMessage);
         }
-        else if (allowedBindingMode == BindingMode.OneWay)
-        {
-            allowedBindingModes.Add(BindingMode.Default);
-        }
-        Assert.That(allowedBindingModes, Has.One.EqualTo(binding.ParentBinding.Mode), errorMessage);
+
+        return binding;
     }
 
     public static void AssertElementBinding(FrameworkElement targetElement, DependencyProperty targetProperty, BindingMode allowedBindingMode, FrameworkElement sourceElement)

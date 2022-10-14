@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using TestTools;
 
 
 namespace Exercise1.Tests
