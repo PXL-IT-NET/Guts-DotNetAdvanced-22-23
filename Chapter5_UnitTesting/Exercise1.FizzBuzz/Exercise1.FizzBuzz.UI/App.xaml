@@ -1,0 +1,8 @@
+﻿<Application x:Class="Exercise1.FizzBuzz.UI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Exercise1.FizzBuzz.UI">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
