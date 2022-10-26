@@ -30,6 +30,8 @@ public class CompositionFiltersTests
         string searchKey = composition.Title.Substring(0, 5);
         Assert.That(CompositionFilters.QuickFilter(composition, searchKey), Is.True,
             "The QuickFilter method should search the searchkey in the Title of the composition");
+        Assert.That(CompositionFilters.QuickFilter(composition, Guid.NewGuid().ToString()), Is.False,
+            "The QuickFilter method should return false when the searchkey is not in the Title of the composition");
     }
 
     [MonitoredTest("CompositionFilters - DetailedFilter - Should search Keyword in Title and Description")]
@@ -42,10 +44,13 @@ public class CompositionFiltersTests
         };
         string searchKeyInTitle = composition.Title.Substring(0, 5);
         string searchKeyInDescription = composition.Description.Substring(0, 5);
+        string nonMatchingSearchKey = Guid.NewGuid().ToString();
         Assert.That(CompositionFilters.DetailedFilter(composition, searchKeyInTitle), Is.True,
             "The DetailedFilter method should search the searchkey in the Title and the Description of the composition");
         Assert.That(CompositionFilters.DetailedFilter(composition, searchKeyInDescription), Is.True,
             "The DetailedFilter method should search the searchkey in the Title and the Description of the composition");
+        Assert.That(CompositionFilters.DetailedFilter(composition, nonMatchingSearchKey), Is.False,
+            "The DetailedFilter method should return false when the searchkey is not in the Title or the Description of the composition");
     }
 
     [MonitoredTest("CompositionFilters - ReleaseYearFilter - Should search year in ReleaseYear")]
@@ -58,5 +63,8 @@ public class CompositionFiltersTests
         composition.ReleaseDate = randomDate;
         Assert.That(CompositionFilters.ReleaseYearFilter(composition, randomDate.Year.ToString()), Is.True,
             "The ReleaseYearFilter method should search for a Composition with the passed ReleaseYear");
+
+        Assert.That(CompositionFilters.ReleaseYearFilter(composition, $"{randomDate.Year + 1}"), Is.False,
+            "The ReleaseYearFilter method should return false when the searchKey is a different year than the ReleaseYear of the composition");
     }
 }
