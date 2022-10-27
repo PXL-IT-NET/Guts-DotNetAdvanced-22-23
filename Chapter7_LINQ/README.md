@@ -1,4 +1,4 @@
-# Exercises - Chapter 11 - LINQ
+# Exercises - Chapter 7 - LINQ
 
 ## Exercise 1
 
