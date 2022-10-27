@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Guts.Client.Core" Version="4.0.0" />
+    <PackageReference Include="Guts.Client.Core" Version="4.0.2" />
     <PackageReference Include="Guts.Client.WPF" Version="1.1.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
     <PackageReference Include="Moq" Version="4.18.2" />
