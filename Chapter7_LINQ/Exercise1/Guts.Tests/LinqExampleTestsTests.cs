@@ -103,6 +103,7 @@ LinqExamples\JoinExamples.cs;")]
         public void _06_GroupExampleTests_ShouldAllPass()
         {
             AssertUsesLinq("GroupExamples.cs");
+            AssertUsesGrouping("GroupExamples.cs");
             var testClassInstance = new GroupExamplesTests();
             AssertAllTestMethodsPass(testClassInstance);
         }
@@ -127,6 +128,16 @@ LinqExamples\JoinExamples.cs;")]
 
             Assert.That(content, Does.Not.Contain("while("), $"A while-loop is used in '{sourceFileName}'. " +
                                                              "This is not necessary when LINQ is used.");
+        }
+
+        private void AssertUsesGrouping(string sourceFileName)
+        {
+            string content = _contents[sourceFileName];
+
+            Assert.That(content, Does.Not.Contain("tolookup("), $"The ToLookUp method is used in '{sourceFileName}'. " +
+                                                           "The grouping functionality of LINQ should be used for the Group examples.");
+
+            Assert.That(content, Does.Contain("group"), "The grouping functionality of LINQ should be used for the Group examples.");
         }
 
         private void AssertAllTestMethodsPass(object testClassInstance)
