@@ -18,6 +18,7 @@ The assignments for each chapter can be found in de README.md in the folder of t
 * [Chapter 2 - C# Language features](Chapter2_LanguageFeatures/README.md)
 * [Chapter 3 + 4 - Databinding, MVVM, Resources, Data Templates](Chapter3_DatabindingMVVM/README.md)
 * [Chapter 5 - Unit testing](Chapter5_UnitTesting/README.md)
+* [Chapter 6 - Layered architecture](Chapter6_LayeredArchitecture/README.md)
 
 ## Getting Started
 
