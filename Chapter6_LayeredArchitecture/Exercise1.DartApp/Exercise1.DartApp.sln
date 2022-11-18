@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DartApp.Domain", "DartApp.Domain\DartApp.Domain.csproj", "{3E9DE4BB-DCAB-487A-A66A-CBF87564668E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DartApp.AppLogic", "DartApp.AppLogic\DartApp.AppLogic.csproj", "{DCECA2FF-6BD7-4917-9D3D-F73B42A4B40B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DartApp.Infrastructure", "DartApp.Infrastructure\DartApp.Infrastructure.csproj", "{ABFB879F-228E-4DDB-9B97-15FF7288B428}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DartApp.Presentation", "DartApp.Presentation\DartApp.Presentation.csproj", "{56642AC2-6C48-4DC7-AB9E-66CE35DB656A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DartApp.Tests", "DartApp.Tests\DartApp.Tests.csproj", "{8AD908FF-43E6-4F74-B2EF-E8F8E635156D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3E9DE4BB-DCAB-487A-A66A-CBF87564668E} = {3E9DE4BB-DCAB-487A-A66A-CBF87564668E}
+		{56642AC2-6C48-4DC7-AB9E-66CE35DB656A} = {56642AC2-6C48-4DC7-AB9E-66CE35DB656A}
+		{ABFB879F-228E-4DDB-9B97-15FF7288B428} = {ABFB879F-228E-4DDB-9B97-15FF7288B428}
+		{DCECA2FF-6BD7-4917-9D3D-F73B42A4B40B} = {DCECA2FF-6BD7-4917-9D3D-F73B42A4B40B}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E9DE4BB-DCAB-487A-A66A-CBF87564668E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E9DE4BB-DCAB-487A-A66A-CBF87564668E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E9DE4BB-DCAB-487A-A66A-CBF87564668E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E9DE4BB-DCAB-487A-A66A-CBF87564668E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCECA2FF-6BD7-4917-9D3D-F73B42A4B40B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCECA2FF-6BD7-4917-9D3D-F73B42A4B40B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCECA2FF-6BD7-4917-9D3D-F73B42A4B40B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCECA2FF-6BD7-4917-9D3D-F73B42A4B40B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABFB879F-228E-4DDB-9B97-15FF7288B428}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABFB879F-228E-4DDB-9B97-15FF7288B428}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABFB879F-228E-4DDB-9B97-15FF7288B428}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABFB879F-228E-4DDB-9B97-15FF7288B428}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56642AC2-6C48-4DC7-AB9E-66CE35DB656A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56642AC2-6C48-4DC7-AB9E-66CE35DB656A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56642AC2-6C48-4DC7-AB9E-66CE35DB656A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56642AC2-6C48-4DC7-AB9E-66CE35DB656A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AD908FF-43E6-4F74-B2EF-E8F8E635156D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AD908FF-43E6-4F74-B2EF-E8F8E635156D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AD908FF-43E6-4F74-B2EF-E8F8E635156D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AD908FF-43E6-4F74-B2EF-E8F8E635156D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6C56C01-DCE1-4BA7-90A0-D5EF01925B34}
+	EndGlobalSection
+EndGlobal
