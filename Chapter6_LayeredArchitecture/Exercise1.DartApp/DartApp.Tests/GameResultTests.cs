@@ -33,12 +33,12 @@ namespace DartApp.Tests
         }
 
 
-        [MonitoredTest("GameResult - Should only be visible to the domain layer")]
-        public void _03_ShouldOnlyBeVisibleToTheDomainLayer()
-        {
-            Assert.That(_gameResultType.IsNotPublic,
-                "Only IGameResult should be visible to the other layers. The GameResult class itself can be encapsulated in the domain layer.");
-        }
+        //[MonitoredTest("GameResult - Should only be visible to the domain layer")]
+        //public void _03_ShouldOnlyBeVisibleToTheDomainLayer()
+        //{
+        //    Assert.That(_gameResultType.IsNotPublic,
+        //        "Only IGameResult should be visible to the other layers. The GameResult class itself can be encapsulated in the domain layer.");
+        //}
 
         [MonitoredTest("GameResult - Should have a private parameter-less constructor and private setters (for json conversion to work)")]
         public void _04_ShouldHaveAPrivateParameterLessConstructorAndPrivateSettersForJsonConversionToWork()

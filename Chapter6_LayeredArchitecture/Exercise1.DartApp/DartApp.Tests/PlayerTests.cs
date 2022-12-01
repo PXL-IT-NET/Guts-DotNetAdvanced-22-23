@@ -33,12 +33,12 @@ namespace DartApp.Tests
                 "Undo your changes on the file to make this test pass.");
         }
 
-        [MonitoredTest("Player - Should only be visible to the domain layer")]
-        public void _03_ShouldOnlyBeVisibleToTheDomainLayer()
-        {
-            Assert.That(_playerType.IsNotPublic,
-                "Only IPlayer should be visible to the other layers. The Player class itself can be encapsulated in the domain layer.");
-        }
+        //[MonitoredTest("Player - Should only be visible to the domain layer")]
+        //public void _03_ShouldOnlyBeVisibleToTheDomainLayer()
+        //{
+        //    Assert.That(_playerType.IsNotPublic,
+        //        "Only IPlayer should be visible to the other layers. The Player class itself can be encapsulated in the domain layer.");
+        //}
 
         [MonitoredTest("Player - Should have a private parameter-less constructor and private setters (for json conversion to work)")]
         public void _04_ShouldHaveAPrivateParameterLessConstructorAndPrivateSettersForJsonConversionToWork()
