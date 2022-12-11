@@ -1,0 +1,60 @@
+﻿<Window x:Class="InternshipsAdmin.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InternshipsAdmin.UI"
+        mc:Ignorable="d"
+        Title="Internships" Height="450" Width="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition x:Name="rowToHide" Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock>Companies</TextBlock>
+        <DataGrid x:Name="CompanyDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" Grid.Row="1" SelectionChanged="CompanyDataGrid_SelectionChanged" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="id" Binding="{Binding Path=CompanyId}"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}"/>
+                <DataGridTextColumn Header="Address" Binding="{Binding Path=Address}"/>
+                <DataGridTextColumn Header="Zip" Binding="{Binding Path=Zip}"/>
+                <DataGridTextColumn Header="City" Binding="{Binding Path=City}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock Grid.Row="0" Grid.Column="1">Students</TextBlock>
+        <DataGrid x:Name="StudentDataGrid" CanUserAddRows="False" Grid.Row="1" Grid.Column="1" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}"/>
+                <DataGridTextColumn Header="Department" Binding="{Binding Path=Department}"/>
+                <DataGridTextColumn Header="SuperVisor" Binding="{Binding Path=Supervisor}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="RemoveStudentFromSupervisorButton" Content="Remove Student" Click="RemoveStudentFromSupervisorButton_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center">
+            <StackPanel Orientation="Vertical" Margin="20">
+                <TextBlock Text="Select Student"/>
+                <ComboBox x:Name="StudentsComboBox" DisplayMemberPath="Name" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="20">
+                <TextBlock Text="Select Supervisor" />
+                <ComboBox x:Name="SupervisorsComboBox" DisplayMemberPath="Name" />
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="AddStudentForCompanyButton" Content="Add Student with Superviser to Selected Company" Grid.Row="2" Grid.Column="0" Click="AddStudentForCompanyButton_Click">
+            </Button>
+    </Grid>
+</Window>
