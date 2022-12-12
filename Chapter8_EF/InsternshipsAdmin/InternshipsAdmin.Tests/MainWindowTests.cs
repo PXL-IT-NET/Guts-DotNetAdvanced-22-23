@@ -9,7 +9,7 @@ using System.Windows.Controls;
 
 namespace InternshipsAdmin.Tests
 {
-    [ExerciseTestFixture("dotnet2", "H08", "Exercise01", @"InternshipsAdmin.UI\MainWindow.cs")]
+    [ExerciseTestFixture("dotnet2", "H08", "Exercise01", @"InternshipsAdmin.UI\MainWindow.xaml.cs")]
     [Apartment(ApartmentState.STA)]
     public class MainWindowTests
     {

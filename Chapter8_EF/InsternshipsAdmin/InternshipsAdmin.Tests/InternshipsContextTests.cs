@@ -6,7 +6,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace InternshipsAdmin.Tests
 {
-    [ExerciseTestFixture("dotnet2", "H8", "Exercise01", @"InternshipsAdmin.Infrastructure\InternshipsContext.cs")]
+    [ExerciseTestFixture("dotnet2", "H08", "Exercise01", @"InternshipsAdmin.Infrastructure\InternshipsContext.cs")]
     internal class InternshipsContextTests : DatabaseTests
     {
         private string _internshipsContextClassContent;
