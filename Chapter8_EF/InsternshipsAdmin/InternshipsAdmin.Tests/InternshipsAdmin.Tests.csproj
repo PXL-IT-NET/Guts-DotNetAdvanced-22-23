@@ -22,9 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\InsternshipsAdmin.UI\InternshipsAdmin.UI.csproj" />
     <ProjectReference Include="..\InternshipsAdmin.Domain\InternshipsAdmin.Domain.csproj" />
     <ProjectReference Include="..\InternshipsAdmin.Infrastructure\InternshipsAdmin.Infrastructure.csproj" />
+    <ProjectReference Include="..\InternshipsAdmin.UI\InternshipsAdmin.UI.csproj" />
   </ItemGroup>
 
 </Project>
