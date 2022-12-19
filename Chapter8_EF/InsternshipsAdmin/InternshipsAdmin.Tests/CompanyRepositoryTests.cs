@@ -282,7 +282,7 @@ namespace InternshipsAdmin.Tests
             Supervisor supervisor;
             using (var context = CreateDbContext(false))
             {
-                var company = new Company();
+                var company = new Company(Guid.NewGuid().ToString(), Guid.NewGuid().ToString(), Guid.NewGuid().ToString(), Guid.NewGuid().ToString());
                 context.Add(company);
                 context.SaveChanges();
 

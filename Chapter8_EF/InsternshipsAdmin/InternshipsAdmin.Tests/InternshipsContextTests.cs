@@ -63,7 +63,7 @@ namespace InternshipsAdmin.Tests
 
             Assert.That(ifStatementBody,
                 Contains.Substring("\"Data Source=(localdb)\\\\mssqllocaldb; Initial Catalog=Internships\""),
-                () => "The connectionstring should be correctly retrieved from the app.config.");
+                () => "The connectionstring should be hard coded in the OnConfiguring method.");
 
             Assert.That(ifStatementBody, Contains.Substring("optionsBuilder.UseSqlServer("),
                 () => "You should tell Entity Framework that is should use the SQL Server provider.");
