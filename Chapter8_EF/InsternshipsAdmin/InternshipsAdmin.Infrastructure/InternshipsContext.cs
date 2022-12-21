@@ -18,14 +18,10 @@ namespace InternshipsAdmin.Infrastructure
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            throw new NotImplementedException();
-
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            throw new NotImplementedException();
-
         }
     }
 }
