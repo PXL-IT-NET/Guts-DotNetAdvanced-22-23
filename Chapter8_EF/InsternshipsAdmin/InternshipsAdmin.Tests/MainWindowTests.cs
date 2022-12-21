@@ -84,6 +84,8 @@ namespace InternshipsAdmin.Tests
         [MonitoredTest("MainWindow - DataGridSelectionChanged should Fill the comboboxex and update the students datagrid")]
         public void _02_DataGridSelectionChanged_ShouldFillTheComboboxesAndUpdateTheStudentsDataGrid()
         {
+            _companyDataGrid.SelectedIndex = 0;
+
             Company company = (Company)_companyDataGrid.SelectedItem;
             _companyRepositoryMock.Setup(repo => repo.GetStudentsOfCompany(company.CompanyId)).Returns(_allStudentsOfCompany);
 
