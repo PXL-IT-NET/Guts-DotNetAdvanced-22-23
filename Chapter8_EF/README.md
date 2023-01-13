@@ -39,7 +39,7 @@ The AppLogic layer is complete. You do not have the change or add code in this l
 ### Infrastructure
 Implement the infrastructure layer. 
 Create the data model by adding the correct code to the Contextfile. Make sure EF interprets this model correctly so it can create the Internships database like the screenshot above.
-The database has to created under the (localdb)\mssqllocaldb SQL Server instance.
+The database has to be created under the (localdb)\mssqllocaldb SQL Server instance.
 
 Also provide seeding data.
 
