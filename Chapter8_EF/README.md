@@ -1,9 +1,9 @@
 # Exercises - Chapter 8 - Entity Framework
 
 ## Exercise 1 (InternshipsAdmin)
-In this exercise you will be creating a desktop application ro administer internships. 
+In this exercise you will be creating a desktop application to administer internships. 
 
-First you have to create a database by using Entity Framework. The name of the database has to be Internships and has to contain the folowing tables:
+First you have to create a database by using Entity Framework. The name of the database has to be Internships and has to contain the following tables:
 
 ![Internships App](images/TablesInDatabase.png)
 
@@ -13,11 +13,11 @@ You have to seed 2 companies:
 
 You can add student, contact and supervisor data manually.
 
-When the application starts, you get a list of all the internship companies
+When the application starts, you get a list of all the internship companies.
 
 ![Internships App](images/MainWindow.png)
 
-When you select a company, the students whose supservisor is connected to the company, will be shown on the right.
+When you select a company, the students whose supervisor is connected to the company, will be shown on the right.
 
 Also 2 comboxes will be visible. The students combobox contains all the students who doesn't have a supervisor yet.
 The supervisor combobox contains all the supervisors of the selected company.
@@ -26,7 +26,7 @@ When the button is clicked, the selected student will be removed from the combob
 
 ![Internships App](images/MainWindow_WithStudents.png)
 
-When a student is added in the list on the right, this student can be removed by clikcing the 'Remove Student' button. When the student is removed from the list, the student will
+When a student is added in the list on the right, this student can be removed by clicking the 'Remove Student' button. When the student is removed from the list, the student will
 again be visible in de combobox (he will be a student without a supervisor again).
 
 ### Domain
@@ -34,11 +34,11 @@ again be visible in de combobox (he will be a student without a supervisor again
 The domain layer is complete. You do not have the change or add code in this layer. 
 
 ### AppLogic
-The AppLogig layer is complete. You do not have the change or add code in this layer. 
+The AppLogic layer is complete. You do not have the change or add code in this layer. 
 
 ### Infrastructure
 Implement the infrastructure layer. 
-Create the data model by adding the correct code to the Contextfile. Make sure EF interpretes this model correctly so it can create the Internships database like the screenshot above.
+Create the data model by adding the correct code to the Contextfile. Make sure EF interprets this model correctly so it can create the Internships database like the screenshot above.
 The database has to created under the (localdb)\mssqllocaldb SQL Server instance.
 
 Also provide seeding data.
