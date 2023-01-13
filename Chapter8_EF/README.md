@@ -19,7 +19,7 @@ When the application starts, you get a list of all the internship companies.
 
 When you select a company, the students whose supervisor is connected to the company, will be shown on the right.
 
-Also 2 comboxes will be visible. The students combobox contains all the students who doesn't have a supervisor yet.
+Also 2 comboboxes will be visible. The students combobox contains all the students who don't have a supervisor yet.
 The supervisor combobox contains all the supervisors of the selected company.
 By clicking the 'Add Student with Supervisor to Selected Company' will add the selected Supervisor to the selected company, and add the selected student to the selected supervisor.
 When the button is clicked, the selected student will be removed from the combobox (because he will no longer be a student without a supervisor).
